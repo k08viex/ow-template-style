@@ -1,0 +1,123 @@
+/* ---------- reset ------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  word-break: break-all;
+  vertical-align: baseline;
+}
+
+*::before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img_only {
+  display: block;
+}
+.img_only img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, dl, dd, dt, table, tr, th, ul, li {
+  color: inherit;
+  line-height: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a, span, small, strong {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+a:hover {
+  opacity: 0.7;
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+address {
+  font-style: normal;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+@media screen and (min-width: 1025px) {
+  a[href*="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+input, button, textarea, select {
+  font-size: 1.6rem;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 0.3em 0.5em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #fffcdb;
+  border: 1px solid #dcdcdc;
+  vertical-align: middle;
+}
+
+button[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+}
+
+fieldset {
+  border: none;
+}
+
+@media screen and (min-width: 879px) {
+  .sp_only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pc_only {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+}/*# sourceMappingURL=style.css.map */

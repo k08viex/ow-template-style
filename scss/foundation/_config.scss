@@ -1,0 +1,48 @@
+//color
+    $black: #333;
+    $white: #fff;
+    $red: #ff0000;
+    $blue: #0000ff;
+    $green: #00ff00;
+
+//breakpoint
+$sp: 768px;
+$pc: 769px;
+@mixin sp {
+    @media screen and (max-width: $sp){
+        @content;
+    }
+}
+@mixin pc {
+    @media screen and (min-width: $pc){
+        @content;
+    }
+}
+.sp_only {
+    @include pc {
+        display: none !important;
+    }
+}
+.pc_only {
+    @include sp {
+        display: none !important;
+    }
+}
+
+//common
+
+* {
+    color: black;
+    font-family:  "メイリオ", "Meiryo","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+}
+body {
+    font-size: 1.4rem;
+    @include pc {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+

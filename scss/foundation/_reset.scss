@@ -1,0 +1,100 @@
+
+// =================================
+// 【title】reset css by ottoworks
+// 【log】
+//      2022 06 29　htmlにoverscroll-behavior-y: none;を追加
+//      2022 06 28　address追加
+//      2022 06 14　input,button,textarea,selectのfont-sizeを16pxに変更
+//      2022 03 12　a:hoverをviexのデフォルトに変更
+//      2022 01 19　html,bodyのheightプロパティをmin-heightプロパティに変更
+//      2021 12 28　fieldsetタグを追加。img, picture, video, canvas, svgにheight: auto;を追加
+//      2021 12 14　white-space: nowrapの廃止※iOSで最後の一文字が改行される要素にのみアテる。
+//      2021 08 20　バナーなど、ブロックが画像のみの場合、aタグにimg_onlyクラスを与える
+// =================================
+
+/* ---------- reset ------------------------------ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-all;  //リンクなどが文字続きで改行されるようにする
+    vertical-align: baseline;
+}
+*::before , *:after {
+    box-sizing: border-box;
+}
+html {
+    overscroll-behavior-y: none;
+    font-size:62.5%;    //1rem=10px
+    min-height: 100%;
+}
+body {
+    min-height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;    //テキストのレンダリングを改善
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+li {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p, dl, dd, dt, table, tr, th, ul, li {
+    color: inherit;
+    line-height: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+a,span,small,strong {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+a:hover{
+    opacity: 0.7;
+    color: #0000EE; //2022 03 12 add
+    text-decoration: underline; //2022 03 12 add
+}
+address {
+    font-style: normal;    //2022 06 28 
+}
+// 2021 08 20　borderが重なったときに太くならないようにする
+table,th,td {
+    border-collapse: collapse;
+}
+// 画面幅が1025pxを超える場合はtelはリンクしない
+@media screen and (min-width: 1025px){
+    a[href*="tel:"] {
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+    }
+}
+input, button, textarea, select {
+    font-size: 1.6rem;       //スマートフォンでinput要素がzoomアップしない最小値 2022 06 14 modify
+}
+input[type=text],
+input[type=tel],
+input[type=email],
+textarea {
+    width:100%;
+    padding: 0.3em 0.5em;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fffcdb;
+    border: 1px solid #dcdcdc;
+    vertical-align: middle;
+}
+button[type=submit] {
+    appearance: none;
+    border: none;
+    background: none;
+}
+// fieldset
+fieldset {
+    border: none;
+}
