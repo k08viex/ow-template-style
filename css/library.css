@@ -1,0 +1,53 @@
+/* トップに戻るボタン */
+    [data-btn=to-top] {
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s,visibility .5s;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    [data-btn=to-top].is-visible {
+    opacity: 1;
+    visibility: visible;
+    }
+
+/* フェードアップ */
+
+.fade {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@media screen and (max-width: 520px){
+    .fade {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+}
+
+@keyframes fadeUp {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeUp {
+    animation-name: fadeUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* タブメニュー */
+[data-tab=btn]{
+    cursor: pointer;
+}
+[data-tab=area].hide{
+    display: none;
+}
+[data-tab=area].active {
+    display: block;
+}
